@@ -1,0 +1,36 @@
+     
+//A palindrome is a number or a string which is similar when read from the front and from the rear. For example: 121 or Oppo 
+
+//etc.
+
+
+#include<stdio.h>
+int main()
+{
+    int a[20],i=0,n,num1,r,count=0;
+    printf("enter the number u wann check pelindrome");
+    scanf("%d",&n);
+    while (n != 0) 
+    { 
+     num1 =n % 10; 
+     a[i]=num1;
+     n = n/10;
+     i++;
+     count++;
+    }  
+
+
+
+    r=count;
+    for(i=0;i<count/2;i++)
+    {
+     if(a[i]!=a[r-i])
+     {
+         printf("it's not a pallindrome");
+         break;
+     }
+     
+    }
+    return 0;
+}
+
